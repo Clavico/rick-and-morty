@@ -2,18 +2,18 @@ import { useState, useEffect } from 'react'
 import Character from './components/Character'
 
 function App() {
-  const [characteres, setCharacteres] = useState([])
+  const [Characters, setCharacters] = useState([])
 
   useEffect(() => {
-    const getCharacteres = async () => {
-      const res = await fetchCharacteres()
-      setCharacteres(res)
+    const getCharacters = async () => {
+      const res = await fetchCharacters()
+      setCharacters(res)
     }
 
-    getCharacteres()
+    getCharacters()
   }, [])
 
-  const fetchCharacteres = async () => {
+  const fetchCharacters = async () => {
     var nextUrl = 'https://rickandmortyapi.com/api/character';
     var result = [];
     do{
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="container">
-      {characteres.map((character) => {
+      {Characters.map((character) => {
         return <Character
           key={character.id}
           image={character.image}
