@@ -1,13 +1,77 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #F0F0F7;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.character-item {
+  background: #FFFFFF;
+  border: 1px solid #E6E6F0;
+  border-radius: 0.8rem;
+  margin: 10px;
+  overflow: hidden;
+  padding: 20px;
+  width: 335px;
+  height: 335px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.character-item img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+.character-item strong {
+  margin: 10px;
+  font: 700 2.4rem Roboto;
+  text-align: center;
+  display: block;
+  color: #000000;
+}
+
+.character-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.Alive {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: green;
+  margin: 10px;
+}
+
+.Dead {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: red;
+  margin: 10px;
+}
+
+.unknown {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: lightgrey;
+  margin: 10px;
 }
